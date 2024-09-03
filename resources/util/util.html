@@ -101,9 +101,11 @@ Utilities
 <p><em>[<a href="/resources.html">resources</a>] [<a
 href="/util.html">util</a>]</em></p>
 <h3 id="bash">Bash</h3>
-<p>To use an edition interface in line <em>vim</em> syle in your
+<ul>
+<li>To use an edition interface in line <em>vim</em> syle in your
 <em>bash</em> shell, just include the following opcion in your
-<em>~/.bashrc</em> file:</p>
+<em>~/.bashrc</em> file:</li>
+</ul>
 <div class="sourceCode" id="cb1"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span> <span class="at">-o</span> vi</span></code></pre></div>
 <p>Bonus: If you want to show the current mode, which is really
@@ -116,19 +118,24 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="
 <p>The result will look something like this:</p>
 <div class="sourceCode" id="cb3"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">|</span><span class="ex">i</span><span class="kw">|</span><span class="ex">user@machine:~$</span> Hello wo</span></code></pre></div>
+<ul>
+<li>To rename a number of files in nested folders:</li>
+</ul>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> <span class="pp">*</span>/<span class="pp">*</span>.ext <span class="at">-type</span> f <span class="at">-exec</span> rename <span class="st">&#39;s/oldtext/newtext/&#39;</span> <span class="st">&#39;{}&#39;</span> <span class="dt">\;</span></span></code></pre></div>
 <h3 id="pdf">PDF</h3>
 <h4 id="merge-pdf-pages">Merge pdf pages</h4>
-<div class="sourceCode" id="cb4"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> pdfunite</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pdfunite</span> version 22.02.0</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Copyright</span> 2005-2022 The Poppler Developers <span class="at">-</span> http://poppler.freedesktop.org</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="ex">Copyright</span> 1996-2011 Glyph <span class="kw">&amp;</span> <span class="ex">Cog,</span> LLC</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="ex">Usage:</span> pdfunite [options] <span class="op">&lt;</span>PDF-sourcefile-1<span class="op">&gt;</span>..<span class="op">&lt;</span>PDF-sourcefile-n<span class="op">&gt;</span> <span class="op">&lt;</span>PDF-destfile<span class="op">&gt;</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="ex">-v</span>             : print copyright and version info</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="ex">-h</span>             : print usage information</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="ex">-help</span>          : print usage information</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="ex">--help</span>         : print usage information</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="ex">-?</span>             : print usage information</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> pdfunite</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pdfunite</span> version 22.02.0</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Copyright</span> 2005-2022 The Poppler Developers <span class="at">-</span> http://poppler.freedesktop.org</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="ex">Copyright</span> 1996-2011 Glyph <span class="kw">&amp;</span> <span class="ex">Cog,</span> LLC</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="ex">Usage:</span> pdfunite [options] <span class="op">&lt;</span>PDF-sourcefile-1<span class="op">&gt;</span>..<span class="op">&lt;</span>PDF-sourcefile-n<span class="op">&gt;</span> <span class="op">&lt;</span>PDF-destfile<span class="op">&gt;</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="ex">-v</span>             : print copyright and version info</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="ex">-h</span>             : print usage information</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="ex">-help</span>          : print usage information</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="ex">--help</span>         : print usage information</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  <span class="ex">-?</span>             : print usage information</span></code></pre></div>
 <h3 id="vim">Vim</h3>
 <p><a href="https://www.vim.org/">Vim</a> is a highly configurable text
 editor built to make creating and changing any kind of text very
@@ -157,8 +164,8 @@ href="https://github.com/erikw/vim-keybindings-everywhere-the-ultimate-list">The
 Keybindings Everywhere - The Ultimate List</a>.</p>
 <h3 id="window-management">Window Management</h3>
 <h4 id="take-a-screenshot">Take a screenshot</h4>
-<div class="sourceCode" id="cb5"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> import screenshot.png</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> import screenshot.png</span></code></pre></div>
 <p>Part of the imagemagick package.</p>
 <h4 id="configure-conected-devices">Configure conected devices</h4>
 <p>autorandr - automatically select a display configuration based on
@@ -169,8 +176,8 @@ I3.</p>
 Audio&amp;Video from Linux to Google Cast devices</h4>
 <p>Cast your Linux or macOS audio and video to your Google Cast devices,
 e.g. Chromecast.</p>
-<div class="sourceCode" id="cb6"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mkchromecast <span class="at">--video</span> <span class="at">--screencast</span></span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mkchromecast <span class="at">--video</span> <span class="at">--screencast</span></span></code></pre></div>
 <hr />
 </body>
 </html>
