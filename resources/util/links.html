@@ -13,18 +13,22 @@ software, methodology" />
     div.columns{display: flex; gap: min(4vw, 1.5em);}
     div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
     ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
       width: 0.8em;
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for citations */
     div.csl-bib-body { }
     div.csl-entry {
       clear: both;
     }
-    .hanging div.csl-entry {
+    .hanging-indent div.csl-entry {
       margin-left:2em;
       text-indent:-2em;
     }
@@ -38,12 +42,8 @@ software, methodology" />
     }
     div.csl-indent {
       margin-left: 2em;
-    }
-  </style>
+    }  </style>
   <link rel="stylesheet" href="/jab.css" />
-  <!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-  <![endif]-->
 </head>
 <body>
 <header id="title-block-header">
@@ -98,25 +98,24 @@ data-cites="lidwell2010">[4]</span></li>
 System Usability Scale (SUS)</a></li>
 </ul>
 <hr />
-<div id="refs" class="references csl-bib-body" role="doc-bibliography">
-<div id="ref-frischmann2018re" class="csl-entry" role="doc-biblioentry">
+<div id="refs" class="references csl-bib-body" role="list">
+<div id="ref-frischmann2018re" class="csl-entry" role="listitem">
 <div class="csl-left-margin">[1] </div><div
 class="csl-right-inline">Frischmann, B. and Selinger, E. 2018. <em><a
 href="https://books.google.es/books?id=eyVTDwAAQBAJ">Re-engineering
 humanity</a></em>. Cambridge University Press.</div>
 </div>
-<div id="ref-Gamma1995DesignPatterns" class="csl-entry"
-role="doc-biblioentry">
+<div id="ref-Gamma1995DesignPatterns" class="csl-entry" role="listitem">
 <div class="csl-left-margin">[2] </div><div
 class="csl-right-inline">Gamma, E. et al. 1995. Design patterns:
 Elements of reusable object oriented software.</div>
 </div>
-<div id="ref-krug2013dmmtr" class="csl-entry" role="doc-biblioentry">
+<div id="ref-krug2013dmmtr" class="csl-entry" role="listitem">
 <div class="csl-left-margin">[3] </div><div
 class="csl-right-inline">Krug, S. 2013. <em>Don’t make me think,
 revisited</em>. New Riders Publishing.</div>
 </div>
-<div id="ref-lidwell2010" class="csl-entry" role="doc-biblioentry">
+<div id="ref-lidwell2010" class="csl-entry" role="listitem">
 <div class="csl-left-margin">[4] </div><div
 class="csl-right-inline">Lidwell, W. et al. 2010. <em><a
 href="https://1drv.ms/b/s!Ame3ywVGexlztgB1cP7uGsYMTC4A?e=kmKg2H">Universal
@@ -124,7 +123,7 @@ principles of design: 125 ways to enhance usability, influence
 perception, increase appeal, make better design decisions, and teach
 through design</a></em>. Rockport.</div>
 </div>
-<div id="ref-norman2013design" class="csl-entry" role="doc-biblioentry">
+<div id="ref-norman2013design" class="csl-entry" role="listitem">
 <div class="csl-left-margin">[5] </div><div
 class="csl-right-inline">Norman, D. 2013. <em><a
 href="https://books.google.es/books?id=I1o4DgAAQBAJ">The design of

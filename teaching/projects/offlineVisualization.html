@@ -12,18 +12,22 @@
     div.columns{display: flex; gap: min(4vw, 1.5em);}
     div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
     ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
       width: 0.8em;
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for citations */
     div.csl-bib-body { }
     div.csl-entry {
       clear: both;
     }
-    .hanging div.csl-entry {
+    .hanging-indent div.csl-entry {
       margin-left:2em;
       text-indent:-2em;
     }
@@ -37,12 +41,8 @@
     }
     div.csl-indent {
       margin-left: 2em;
-    }
-  </style>
+    }  </style>
   <link rel="stylesheet" href="/jab.css" />
-  <!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-  <![endif]-->
 </head>
 <body>
 <header id="title-block-header">
@@ -73,21 +73,21 @@ ausencia de una conexión a Internet <span class="citation"
 data-cites="fam2017jwe">[3]</span> <span class="citation"
 data-cites="fam2017thesis">[1]</span>.</p>
 <hr />
-<div id="refs" class="references csl-bib-body" role="doc-bibliography">
-<div id="ref-fam2017thesis" class="csl-entry" role="doc-biblioentry">
+<div id="refs" class="references csl-bib-body" role="list">
+<div id="ref-fam2017thesis" class="csl-entry" role="listitem">
 <div class="csl-left-margin">[1] </div><div
 class="csl-right-inline">Albertos Marco, F. 2017. <em>Responsive web
 interaction: Dynamic management of the interaction in web
 applications</em>. University of Castilla-La Mancha.</div>
 </div>
-<div id="ref-fam2018html5" class="csl-entry" role="doc-biblioentry">
+<div id="ref-fam2018html5" class="csl-entry" role="listitem">
 <div class="csl-left-margin">[2] </div><div
 class="csl-right-inline">Albertos Marco, Félix 2018. Review of the HTML5
 API. <a
 href="https://icwe2018.webengineering.org/docs/Tutorial_Presentation_ICWE2018_TUTORIAL_HTML5_NO_INTRO.pdf"
 class="uri">https://icwe2018.webengineering.org/docs/Tutorial_Presentation_ICWE2018_TUTORIAL_HTML5_NO_INTRO.pdf</a>.</div>
 </div>
-<div id="ref-fam2017jwe" class="csl-entry" role="doc-biblioentry">
+<div id="ref-fam2017jwe" class="csl-entry" role="listitem">
 <div class="csl-left-margin">[3] </div><div
 class="csl-right-inline">Albertos-Marco, F. et al. 2017. A model-based
 approach for describing offline navigation of web applications.

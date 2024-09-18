@@ -12,18 +12,22 @@
     div.columns{display: flex; gap: min(4vw, 1.5em);}
     div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
     ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
       width: 0.8em;
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for citations */
     div.csl-bib-body { }
     div.csl-entry {
       clear: both;
     }
-    .hanging div.csl-entry {
+    .hanging-indent div.csl-entry {
       margin-left:2em;
       text-indent:-2em;
     }
@@ -37,12 +41,8 @@
     }
     div.csl-indent {
       margin-left: 2em;
-    }
-  </style>
+    }  </style>
   <link rel="stylesheet" href="/jab.css" />
-  <!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-  <![endif]-->
 </head>
 <body>
 <header id="title-block-header">
@@ -76,8 +76,8 @@ improve user interaction with Web applications <span class="citation"
 data-cites="fam2022mtap">[7]</span> <span class="citation"
 data-cites="fam2017rehabBook">[3]</span>.</p>
 <hr />
-<div id="refs" class="references csl-bib-body" role="doc-bibliography">
-<div id="ref-fam2013mdwe" class="csl-entry" role="doc-biblioentry">
+<div id="refs" class="references csl-bib-body" role="list">
+<div id="ref-fam2013mdwe" class="csl-entry" role="listitem">
 <div class="csl-left-margin">[1] </div><div
 class="csl-right-inline">Albertos Marco, F. et al. 2013. <a
 href="https://doi.org/10.1007/978-3-319-04244-2_15">A model-based
@@ -86,7 +86,7 @@ interruptions</a>. <em>Current trends in web engineering</em>. QuanZ.
 Sheng and J. Kjeldskov, eds. Springer International Publishing.
 156–171.</div>
 </div>
-<div id="ref-fam2013jucs" class="csl-entry" role="doc-biblioentry">
+<div id="ref-fam2013jucs" class="csl-entry" role="listitem">
 <div class="csl-left-margin">[2] </div><div
 class="csl-right-inline">Albertos Marco, F. et al. 2013. Collaborative
 e-learning through drag <span>&amp;</span> share in synchronous shared
@@ -94,7 +94,7 @@ workspaces. <em>J. <span>UCS</span></em>. 19, 7 (2013), 894–911.
 DOI:https://doi.org/<a
 href="https://doi.org/10.3217/jucs-019-07-0894">10.3217/jucs-019-07-0894</a>.</div>
 </div>
-<div id="ref-fam2017rehabBook" class="csl-entry" role="doc-biblioentry">
+<div id="ref-fam2017rehabBook" class="csl-entry" role="listitem">
 <div class="csl-left-margin">[3] </div><div
 class="csl-right-inline">Albertos Marco, F. et al. 2017. <a
 href="https://doi.org/10.1007/978-3-319-69694-2_14">Virtual
@@ -103,14 +103,14 @@ postures design</a>. <em>ICTs for improving patients rehabilitation
 research techniques</em>. H. M. Fardoun et al., eds. Springer
 International Publishing AG. 1–12.</div>
 </div>
-<div id="ref-fam2018html5" class="csl-entry" role="doc-biblioentry">
+<div id="ref-fam2018html5" class="csl-entry" role="listitem">
 <div class="csl-left-margin">[4] </div><div
 class="csl-right-inline">Albertos Marco, Félix 2018. Review of the HTML5
 API. <a
 href="https://icwe2018.webengineering.org/docs/Tutorial_Presentation_ICWE2018_TUTORIAL_HTML5_NO_INTRO.pdf"
 class="uri">https://icwe2018.webengineering.org/docs/Tutorial_Presentation_ICWE2018_TUTORIAL_HTML5_NO_INTRO.pdf</a>.</div>
 </div>
-<div id="ref-fam2016int" class="csl-entry" role="doc-biblioentry">
+<div id="ref-fam2016int" class="csl-entry" role="listitem">
 <div class="csl-left-margin">[5] </div><div
 class="csl-right-inline">Albertos-Marco, F. et al. 2016. <a
 href="https://doi.org/10.1145/2998626.2998654">Distributing web
@@ -118,14 +118,14 @@ interaction capabilities: The web interaction hub</a>. <em>Proceedings
 of the XVII international conference on human computer interaction</em>
 (New York, NY, USA, 2016), 37:1–37:8.</div>
 </div>
-<div id="ref-fam2017uais" class="csl-entry" role="doc-biblioentry">
+<div id="ref-fam2017uais" class="csl-entry" role="listitem">
 <div class="csl-left-margin">[6] </div><div
 class="csl-right-inline">Albertos-Marco, F. et al. 2019. Foundations for
 distributing the interaction: Facilitating universal access through
 responsive cross-device applications. <em>Journal of Universal Access in
 the Information Society</em>. (2019).</div>
 </div>
-<div id="ref-fam2022mtap" class="csl-entry" role="doc-biblioentry">
+<div id="ref-fam2022mtap" class="csl-entry" role="listitem">
 <div class="csl-left-margin">[7] </div><div
 class="csl-right-inline">Penichet, V.M. et al. 2022. Designing postures
 for rehabilitation therapies in a multimodal system based on a 3D
