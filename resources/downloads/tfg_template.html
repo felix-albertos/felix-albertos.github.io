@@ -121,14 +121,32 @@ pdf document</a> produced by the template.</p>
 <p><a href="/files/tfggii.zip" target="_blank">Download the
 Template</a></p>
 <h3 id="known-issues">Known Issues</h3>
+<h4 id="no-targets-specified-and-no-makefile-found">No targets specified
+and no makefile found</h4>
 <p>If you get the following error:</p>
 <div class="sourceCode" id="cb1"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">make:</span> <span class="pp">***</span> No targets specified and no makefile found. Stop.</span></code></pre></div>
 <p>Try changing the <em>makefile</em>, line 24, when it says “PWD” to
 “shell pwd”.</p>
+<h4 id="arial-font-not-found-when-using-docker">Arial font not found
+when using Docker</h4>
+<p>When using <em>Docker</em>, if you have problems with the “Arial”
+font, try installing the fonts manually.</p>
+<p>First, you have to enter into the container (first, we delete it,
+just in case it was running):</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> make deleteContainer</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> make run</span></code></pre></div>
+<p>Once you are running the container, execute the following
+command:</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> sudo apt install ttf-mscorefonts-installer</span></code></pre></div>
 <h3 id="changelog">Changelog</h3>
 <p>Changes made to the template. If you have any suggestion or you have
 any problem using it, please, let me know.</p>
+<p>It will ask you for the sudo password, which is <em>tfgii</em>:</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[sudo]</span> password for tfgii:</span></code></pre></div>
 <h4 id="section">20/11/2024</h4>
 <ul>
 <li>Changed ubuntu version in dockerfile from “latest” to “22.04” to
