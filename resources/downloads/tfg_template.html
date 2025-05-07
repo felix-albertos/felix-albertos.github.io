@@ -132,8 +132,8 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="
 when using Docker</h4>
 <p>When using <em>Docker</em>, if you have problems with the “Arial”
 font, try installing the fonts manually.</p>
-<p>First, you have to enter into the container (first, we delete it,
-just in case it was running):</p>
+<p>First, you have to enter into the container (first, delete it, just
+in case it was running):</p>
 <div class="sourceCode" id="cb2"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> make deleteContainer</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> make run</span></code></pre></div>
@@ -141,19 +141,27 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="
 command:</p>
 <div class="sourceCode" id="cb3"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> sudo apt install ttf-mscorefonts-installer</span></code></pre></div>
-<h3 id="changelog">Changelog</h3>
-<p>Changes made to the template. If you have any suggestion or you have
-any problem using it, please, let me know.</p>
 <p>It will ask you for the sudo password, which is <em>tfgii</em>:</p>
 <div class="sourceCode" id="cb4"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[sudo]</span> password for tfgii:</span></code></pre></div>
-<h4 id="section">20/11/2024</h4>
+<h3 id="changelog">Changelog</h3>
+<p>Changes made to the template. If you have any suggestion or you have
+any problem using it, please, let me know.</p>
+<h4 id="section">07/05/2025</h4>
+<ul>
+<li>Included support for including images in <em>svg</em> and
+<em>pdf</em> format</li>
+<li>Fixed a bug that prevent <em>Plantuml</em> figures to be referenced
+in the running text</li>
+<li>Improved font management when using <em>Docker</em></li>
+</ul>
+<h4 id="section-1">20/11/2024</h4>
 <ul>
 <li>Changed ubuntu version in dockerfile from “latest” to “22.04” to
 avoid conflicts with user id when compiling the template with
 docker</li>
 </ul>
-<h4 id="section-1">12/06/2024</h4>
+<h4 id="section-2">12/06/2024</h4>
 <ul>
 <li>Changed frontpage and firstpage so month and year fits if the title
 is longer than one line</li>
