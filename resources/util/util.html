@@ -125,6 +125,9 @@ files in nested folders:</h4>
 <div class="sourceCode" id="cb4"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> <span class="pp">*</span>/<span class="pp">*</span>.ext <span class="at">-type</span> f <span class="at">-exec</span> rename <span class="st">&#39;s/oldtext/newtext/&#39;</span> <span class="st">&#39;{}&#39;</span> <span class="dt">\;</span></span></code></pre></div>
 <h4 id="suspend-from-the-cli">Suspend from the cli</h4>
+<p>As part of <a
+href="https://pm-utils.freedesktop.org/wiki/">pm-utils</a>,
+<em>pm-suspend</em> suspends the device, saving system state in RAM.</p>
 <div class="sourceCode" id="cb5"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">apt</span> install pm-utils</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pm-suspend</span></span></code></pre></div>
