@@ -147,25 +147,38 @@ your password secured with gpg2 in a very simple way</h4>
 <p><a href="https://git.zx2c4.com/password-store/about/">Pass</a> is a
 very simple password store that keeps passwords inside gpg2 encrypted
 files inside a simple directory.</p>
+<h4 id="manage-multiple-ssh-identities-in-github">Manage multiple ssh
+identities in github</h4>
+<p>Here is a little script to manage multiple <em>ssh</em> identities in
+github. I named it <em>gitssh</em> and it can be used instead of the
+<em>git</em> command. It works with the same arguments, but before
+executing the actions it shows a menu (<a
+href="https://github.com/junegunn/fzf">fzf</a> has to be installed) to
+chose the <em>ssh</em> identity to be used.</p>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="va">sel</span><span class="op">=</span><span class="va">$(</span><span class="fu">ls</span> ~/.ssh/<span class="pp">*</span>.pub<span class="kw">|</span><span class="fu">rev</span><span class="kw">|</span><span class="fu">cut</span> <span class="at">-d</span> / <span class="at">-f</span> 1<span class="kw">|</span><span class="fu">rev</span><span class="kw">|</span><span class="fu">cut</span> <span class="at">-d</span> . <span class="at">-f</span> 1<span class="kw">|</span><span class="ex">fzf</span><span class="va">)</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="va">exe</span><span class="op">=</span><span class="st">&#39;ssh-add ~/.ssh/&#39;</span><span class="va">$sel</span><span class="st">&#39;;git &#39;</span><span class="va">$@</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh-agent</span> sh <span class="at">-c</span> <span class="st">&quot;</span><span class="va">$exe</span><span class="st">&quot;</span></span></code></pre></div>
 <h3 id="pdf">PDF</h3>
 <h4 id="merge-pdf-pages">Merge pdf pages</h4>
-<div class="sourceCode" id="cb7"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> pdfunite</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pdfunite</span> version 22.02.0</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Copyright</span> 2005-2022 The Poppler Developers <span class="at">-</span> http://poppler.freedesktop.org</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="ex">Copyright</span> 1996-2011 Glyph <span class="kw">&amp;</span> <span class="ex">Cog,</span> LLC</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="ex">Usage:</span> pdfunite <span class="pp">[</span><span class="ss">options</span><span class="pp">]</span> <span class="op">&lt;</span>PDF-sourcefile-1<span class="op">&gt;</span>..<span class="op">&lt;</span>PDF-sourcefile-n<span class="op">&gt;</span> <span class="op">&lt;</span>PDF-destfile<span class="op">&gt;</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="ex">-v</span>             : print copyright and version info</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="ex">-h</span>             : print usage information</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  <span class="ex">-help</span>          : print usage information</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  <span class="ex">--help</span>         : print usage information</span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  <span class="ex">-?</span>             : print usage information</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> pdfunite</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pdfunite</span> version 22.02.0</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Copyright</span> 2005-2022 The Poppler Developers <span class="at">-</span> http://poppler.freedesktop.org</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="ex">Copyright</span> 1996-2011 Glyph <span class="kw">&amp;</span> <span class="ex">Cog,</span> LLC</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="ex">Usage:</span> pdfunite <span class="pp">[</span><span class="ss">options</span><span class="pp">]</span> <span class="op">&lt;</span>PDF-sourcefile-1<span class="op">&gt;</span>..<span class="op">&lt;</span>PDF-sourcefile-n<span class="op">&gt;</span> <span class="op">&lt;</span>PDF-destfile<span class="op">&gt;</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  <span class="ex">-v</span>             : print copyright and version info</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="ex">-h</span>             : print usage information</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  <span class="ex">-help</span>          : print usage information</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>  <span class="ex">--help</span>         : print usage information</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>  <span class="ex">-?</span>             : print usage information</span></code></pre></div>
 <h4 id="verify-digital-signatures-on-pdf-documents-in-the-cli">Verify
 digital signatures on PDF documents in the cli</h4>
 <p>To verify digital signatures using the command line interface use
 <em>pdfsig</em>.</p>
-<div class="sourceCode" id="cb8"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> pdfsig document.pdf</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> pdfsig document.pdf</span></code></pre></div>
 <h3 id="vim">Vim</h3>
 <p><a href="https://www.vim.org/">Vim</a> is a highly configurable text
 editor built to make creating and changing any kind of text very
@@ -213,8 +226,8 @@ reason for that …)</li>
 </ul>
 <h3 id="window-management">Window Management</h3>
 <h4 id="take-a-screenshot">Take a screenshot</h4>
-<div class="sourceCode" id="cb9"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> import screenshot.png</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> import screenshot.png</span></code></pre></div>
 <p>Part of the imagemagick package.</p>
 <h4 id="configure-connected-devices">Configure connected devices</h4>
 <p>autorandr - automatically select a display configuration based on
@@ -225,8 +238,8 @@ I3.</p>
 Audio&amp;Video from Linux to Google Cast devices</h4>
 <p>Cast your Linux or macOS audio and video to your Google Cast devices,
 e.g. Chromecast.</p>
-<div class="sourceCode" id="cb10"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mkchromecast <span class="at">--video</span> <span class="at">--screencast</span></span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mkchromecast <span class="at">--video</span> <span class="at">--screencast</span></span></code></pre></div>
 <hr />
 </body>
 </html>
