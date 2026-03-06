@@ -28,12 +28,12 @@
 <body>
 <header id="title-block-header">
 <h1 class="title">Félix Albertos Marco</h1>
-<p class="subtitle">Utilities</p>
+<p class="subtitle">Vim</p>
 </header>
 <p><strong><a href="/">Home</a>/<a href="/resources/">resources</a>/<a
 href="/resources/util/">util</a>&gt;</strong></p>
 <h2>
-Utilities
+Vim
 </h2>
 <p><em>[<a href="/resources.html">resources</a>] [<a
 href="/util.html">util</a>] [<a href="/vim.html">vim</a>]</em></p>
@@ -86,11 +86,13 @@ reason for that …)</li>
 <h3 id="configuration">Configuration</h3>
 <p>Some configuration tips …</p>
 <h4 id="enable-java-autocompletion">Enable (java) autocompletion</h4>
-<p>call plug#begin(globalVimfiles.’/plugged’) Plug ‘neoclide/coc.nvim’,
-{‘branch’: ‘release’} call plug#end()</p>
-<p>After installing the plugin</p>
+<p>Add the pluggin to your <em>.vimrc</em> file:</p>
+<pre><code>call plug#begin(globalVimfiles.&#39;/plugged&#39;)
+Plug &#39;neoclide/coc.nvim&#39;, {&#39;branch&#39;: &#39;release&#39;}
+call plug#end()</code></pre>
+<p>Install the plugin:</p>
 <pre><code>:PlugInstall</code></pre>
-<p>install <em>java</em> extension</p>
+<p>Install <em>java</em> extension:</p>
 <pre><code>:CocInstall coc-java</code></pre>
 <hr />
 </body>
