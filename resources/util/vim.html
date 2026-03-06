@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="keywords" content="resources, util, vim" />
+  <title>Félix Albertos Marco</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="/jab.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Félix Albertos Marco</h1>
+<p class="subtitle">Utilities</p>
+</header>
+<p><strong><a href="/">Home</a>/<a href="/resources/">resources</a>/<a
+href="/resources/util/">util</a>&gt;</strong></p>
+<h2>
+Utilities
+</h2>
+<p><em>[<a href="/resources.html">resources</a>] [<a
+href="/util.html">util</a>] [<a href="/vim.html">vim</a>]</em></p>
+<p><a href="https://www.vim.org/">Vim</a> is a highly configurable text
+editor built to make creating and changing any kind of text very
+efficient. The way that you interact with it make it more than just a
+text editor (or not), a way of interacting with your entire
+computer.</p>
+<p>Using it, your understanding of how to interact with a computer may
+change. And not only for editing text, but in how you manage your entire
+system, from the window manager, till your general workflow.</p>
+<h3 id="tools">Tools</h3>
+<p>You can find a comprehensive list of applications using Vim
+keybindings in the <a
+href="https://github.com/erikw/vim-keybindings-everywhere-the-ultimate-list">The
+Keybindings Everywhere - The Ultimate List</a>.</p>
+<h4 id="tools-where-i-currently-use-vim-keybindings">Tools where I
+<strong>currently</strong> use Vim keybindings</h4>
+<ul>
+<li><a href="https://aerc-mail.org/">aerc</a>: an email client that runs
+in the terminal, highly efficient and extensible</li>
+<li><a href="https://www.gnu.org/software/bash/">bash</a>: the GNU
+Project’s shell the Bourne Again SHell</li>
+<li><a href="https://dwm.suckless.org/">dwm</a>: dynamic window manager
+for X</li>
+<li><a href="https://qutebrowser.org/">qutebrowser</a>: a
+keyboard-focused browser with a minimal GUI</li>
+<li><a href="https://github.com/tmux/tmux">tmux</a>: a terminal
+multiplexer</li>
+<li><a href="https://vifm.info/">vifm</a>: a file manager with curses
+interface, which provides Vim-like environment for managing objects
+within file systems, extended with some useful ideas from mutt</li>
+<li><a
+href="https://github.com/GeorgeFilipkin/pulsemixer">pulsemixer</a>: cli
+and curses mixer for PulseAudio</li>
+</ul>
+<h4 id="tools-ive-used-but-i-stop-using-or-rarely-use">Tools I’ve used
+but I stop using or rarely use</h4>
+<ul>
+<li><a href="https://neomutt.org/">NeoMutt</a>: a command line mail
+reader</li>
+<li><a href="https://github.com/baskerville/bspwm">bspwm</a>: tiling
+window manager (binary space partition window manager)</li>
+<li><a href="https://i3wm.org/">i3</a>: improved tiling window
+manager</li>
+<li><a href="https://man.archlinux.org/man/vidir.1.en">vidir</a>: edit
+directories and filename in vim (or other text editor, if you find a
+reason for that …)</li>
+</ul>
+<h3 id="configuration">Configuration</h3>
+<p>Some configuration tips …</p>
+<h4 id="enable-java-autocompletion">Enable (java) autocompletion</h4>
+<p>call plug#begin(globalVimfiles.’/plugged’) Plug ‘neoclide/coc.nvim’,
+{‘branch’: ‘release’} call plug#end()</p>
+<p>After installing the plugin</p>
+<pre><code>:PlugInstall</code></pre>
+<p>install <em>java</em> extension</p>
+<pre><code>:CocInstall coc-java</code></pre>
+<hr />
+</body>
+</html>
