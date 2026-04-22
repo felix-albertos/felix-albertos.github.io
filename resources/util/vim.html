@@ -94,6 +94,31 @@ call plug#end()</code></pre>
 <pre><code>:PlugInstall</code></pre>
 <p>Install <em>java</em> extension:</p>
 <pre><code>:CocInstall coc-java</code></pre>
+<h4 id="use-coc-explorer">Use coc-explorer</h4>
+<p>From the <a
+href="https://github.com/weirongxu/coc-explorer">developer
+github</a>:</p>
+<ol type="1">
+<li>Install by coc.nvim command</li>
+</ol>
+<pre><code>:CocInstall coc-explorer</code></pre>
+<ol start="2" type="1">
+<li>Configuration custom vim mapping</li>
+</ol>
+<pre><code>:nmap &lt;space&gt;e &lt;Cmd&gt;CocCommand explorer&lt;CR&gt;</code></pre>
+<ol start="3" type="1">
+<li>Open explorer</li>
+</ol>
+<pre><code>&lt;space&gt;e</code></pre>
+<ol start="4" type="1">
+<li>Press ? to show mappings help</li>
+</ol>
+<p>I have changed default keymapping in vim to not lose functionality,
+so I changed Manage extensions to use ‘E’ instead of ‘e’:</p>
+<pre><code>&quot; Manage extensions
+nnoremap &lt;silent&gt;&lt;nowait&gt; &lt;space&gt;E  :&lt;C-u&gt;CocList extensions&lt;cr&gt;
+&quot; Open coc-explore
+nmap &lt;space&gt;e &lt;Cmd&gt;CocCommand explorer&lt;CR&gt;</code></pre>
 <hr />
 </body>
 </html>
